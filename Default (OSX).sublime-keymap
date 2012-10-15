@@ -1,0 +1,313 @@
+[
+    //インサートモードからctrl+gで抜ける
+    {
+        "keys": ["ctrl+g"],
+        "command": "exit_insert_mode",
+        "context":[
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
+
+
+    //コマンドパレット呼び出し
+    {
+        "keys": [";"],
+        "command": "show_overlay",
+        "args": {"overlay": "command_palette"},
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    //プロジェクト呼び出しショートカット
+    {
+        "keys": ["B"],
+        "command": "prompt_select_project" ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+
+    },
+
+    // ファイルスイッチ
+    {
+        "keys": ["t"],
+        "command": "show_overlay",
+        "args": {"overlay": "goto", "show_files": true} ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    // move tabs
+    { "keys":
+        ["ctrl+h"],
+        "command": "prev_view" ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["ctrl+l"],
+        "command": "next_view" ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+
+    // fold and unfold
+    {
+        "keys": ["["],
+        "command": "fold",
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+    {
+        "keys": ["]"],
+        "command": "unfold",
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["1"],
+        "command": "focus_group",
+        "args": { "group": 0 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["2"],
+        "command": "focus_group",
+        "args": { "group": 1 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["3"],
+        "command": "focus_group",
+        "args": { "group": 2 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["4"],
+        "command": "focus_group",
+        "args": { "group": 3 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+
+    {
+        "keys": ["ctrl+1"],
+        "command": "move_to_group",
+        "args": { "group": 0 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["ctrl+2"],
+        "command": "move_to_group",
+        "args": { "group": 1 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+    {
+        "keys": ["ctrl+3"],
+        "command": "move_to_group",
+        "args": { "group": 2 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+    {
+        "keys": ["ctrl+4"],
+        "command": "move_to_group",
+        "args": { "group": 3 } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["f1"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1]]
+        },
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["f2"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+        },
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["f3"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0],
+            "rows": [0.0, 0.5, 1.0],
+            "cells":
+            [
+                [0, 0, 1, 1], [1, 0, 2, 1],
+                [0, 1, 1, 2], [1, 1, 2, 2]
+            ]
+        },
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+
+    { "keys": ["-"],
+        "command": "toggle_side_bar",
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    { "keys": ["_"],
+        "command": ["toggle_side_bar"],
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": ["e"],
+        "command": "show_overlay",
+        "args":
+        {
+            "overlay": "goto",
+            "text": "@"
+        },
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    { "keys": ["@"],
+        "command": "show_overlay", "args": {"overlay": "goto", "text": "@"},
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    { "keys": ["g","c"],
+        "command": "git_quick_commit",
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    { "keys": ["g","s"],
+        "command": "git_status",
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    { "keys": ["g","l"],
+        "command": "git_log",
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+
+    {
+        "keys": ["c"],
+        "command": "toggle_comment",
+        "args": { "block": false } ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+        "keys": [","], "command": "next_bookmark" ,
+        "context":[
+            { "key": "setting.command_mode"}
+        ]
+    },
+
+    {
+  "keys": ["m"], "command": "toggle_bookmark",
+  "context":[
+      { "key": "setting.command_mode"}
+  ]
+
+    },
+
+    {
+        "keys": ["`"],
+        "command":"focus_side_bar" ,
+        "context":[ { "key": "setting.command_mode"}]
+    },
+
+    { "keys": ["super+alt+["], "command": "fold" },
+    { "keys": ["super+alt+]"], "command": "unfold" },
+    { "keys": ["alt+1"], "command": "fold_by_level", "args": {"level": 1},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+2"], "command": "fold_by_level", "args": {"level": 2},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+3"], "command": "fold_by_level", "args": {"level": 3},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+4"], "command": "fold_by_level", "args": {"level": 4},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+5"], "command": "fold_by_level", "args": {"level": 5},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+6"], "command": "fold_by_level", "args": {"level": 6},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+7"], "command": "fold_by_level", "args": {"level": 7},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+8"], "command": "fold_by_level", "args": {"level": 8},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["alt+9"], "command": "fold_by_level", "args": {"level": 9},"context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["Z"], "command": "unfold_all","context":[ { "key": "setting.command_mode"}] },
+    { "keys": ["z"], "command": "fold_all","context":[ { "key": "setting.command_mode"}]},
+    { "keys": ["alt+t"], "command": "fold_tag_attributes" },
+
+    { "keys": ["alt+k"], "command": "select_lines", "args": {"forward": false} ,"context":[ { "key": "setting.command_mode"}]},
+    { "keys": ["alt+j"], "command": "select_lines", "args": {"forward": true} ,"context":[ { "key": "setting.command_mode"}]},
+
+    { "keys": ["j", "j"], "command": "exit_insert_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
+    {"keys":["ctrl+c"],
+     "command": "shell_prompt",
+     "context":[
+        { "key": "setting.command_mode"}
+      ]
+    }
+]
+
